@@ -1,8 +1,10 @@
 import type { NextPage } from "next";
-import Home from "./Home";
+import styled from "styled-components";
 
-const App: NextPage = () => {
-  return <Home />;
+const Home: NextPage = () => {
+  return <Container>home page</Container>;
 };
 
-export default App;
+const Container = styled.div``;
+
+export default Home;
