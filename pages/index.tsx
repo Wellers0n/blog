@@ -1,8 +1,27 @@
 import type { NextPage } from "next";
-import Home from "./Home";
+import Head from "next/head";
+import styled from "styled-components";
 
-const App: NextPage = () => {
-  return <Home />;
+const Home: NextPage = () => {
+  return (
+    <Container>
+      <Head>
+        <title>Wellerson</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <link rel="shortcut icon" href="/avatar.jpg" />
+      </Head>
+      <Header></Header>
+    </Container>
+  );
 };
 
-export default App;
+const Container = styled.div`
+  width: 100%;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+`;
+
+const Header = styled.header``;
+
+export default Home;
