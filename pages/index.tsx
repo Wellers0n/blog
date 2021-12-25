@@ -7,10 +7,10 @@ const Home: NextPage = () => {
     <Container>
       <Head>
         <title>Wellerson</title>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <link rel="shortcut icon" href="/avatar.jpg" />
       </Head>
-      <Header></Header>
+      <Header>
+        hello
+      </Header>
     </Container>
   );
 };
