@@ -46,7 +46,6 @@ const Container = styled.button<ContainerStyledProps>`
   color: ${({ textColor }) => `${textColor}`};
   padding: 15px 5rem;
   font-size: 1rem;
-  margin-bottom: 30px;
 `;
 
 export default Button;
