@@ -50,8 +50,8 @@ const Home: NextPage = () => {
         </About>
         <Button
           link="/blog"
-          color="#31968f"
-          textColor={"#31968f"}
+          color="#32978e"
+          textColor={"#32978E"}
           outline
           title={"Blog"}
         />
@@ -74,7 +74,7 @@ const Header = styled.header`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  background-color: #31968f;
+  background-color: #32978e;
 `;
 
 const Avatar = styled.div`
@@ -104,12 +104,24 @@ const Footer = styled.footer`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-bottom: 40px;
 `;
 
 const Icons = styled.div`
   display: flex;
   justify-content: space-around;
   width: 25%;
+  @media(max-width: 1100px) {
+    width: 50%;
+  }
+
+  @media(max-width: 700px) {
+    width: 70%;
+  }
+
+  @media(max-width: 500px) {
+    width: 100%;
+  }
 `;
 
 const About = styled.div`
@@ -120,6 +132,17 @@ const About = styled.div`
   color: #161416;
   margin-top: 35px;
   margin-bottom: 50px;
+  @media(max-width: 1100px) {
+    width: 50%;
+  }
+
+  @media(max-width: 700px) {
+    width: 70%;
+  }
+
+  @media(max-width: 500px) {
+    width: 90%;
+  }
 `;
 
 export default Home;
