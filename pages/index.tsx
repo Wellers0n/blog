@@ -50,8 +50,8 @@ const Home: NextPage = () => {
         </About>
         <Button
           link="/blog"
-          color="#31968f"
-          textColor={"#31968f"}
+          color="#32978e"
+          textColor={"#32978E"}
           outline
           title={"Blog"}
         />
@@ -74,7 +74,7 @@ const Header = styled.header`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  background-color: #31968f;
+  background-color: #32978e;
 `;
 
 const Avatar = styled.div`
