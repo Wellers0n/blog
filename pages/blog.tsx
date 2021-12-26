@@ -17,7 +17,7 @@ const Blog: NextPage = () => {
 const Container = styled.div`
   width: 100%;
   height: 100vh;
-  background: #31968f;
+  background: #32978e;
   display: flex;
   align-items: center;
   justify-content: center;
