@@ -14,7 +14,7 @@ const Home: NextPage = () => {
       <Header>
         <div>
           <Name>Wellerson</Name>
-          <Position>Fullstack developer</Position>
+          <Position>Fullstack Developer</Position>
         </div>
         <Avatar>
           <Image src={"/avatar.jpg"} height={200} width={200} alt="avatar" />
@@ -45,8 +45,9 @@ const Home: NextPage = () => {
           </a>
         </Icons>
         <About>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae,
-          nihil ad ipsa molestiae ex cumque! Sequi eius neque, quod voluptatum
+          I like to create and build things on the frontend or backend, my focus
+          is to learn anything new and I will start writing articles to help
+          people.
         </About>
         <Button
           link="/blog"
@@ -111,15 +112,15 @@ const Icons = styled.div`
   display: flex;
   justify-content: space-around;
   width: 25%;
-  @media(max-width: 1100px) {
+  @media (max-width: 1100px) {
     width: 50%;
   }
 
-  @media(max-width: 700px) {
+  @media (max-width: 700px) {
     width: 70%;
   }
 
-  @media(max-width: 500px) {
+  @media (max-width: 500px) {
     width: 100%;
   }
 `;
@@ -132,15 +133,15 @@ const About = styled.div`
   color: #161416;
   margin-top: 35px;
   margin-bottom: 50px;
-  @media(max-width: 1100px) {
+  @media (max-width: 1100px) {
     width: 50%;
   }
 
-  @media(max-width: 700px) {
+  @media (max-width: 700px) {
     width: 70%;
   }
 
-  @media(max-width: 500px) {
+  @media (max-width: 500px) {
     width: 90%;
   }
 `;
