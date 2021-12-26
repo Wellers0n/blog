@@ -2,9 +2,8 @@ import { NextPage } from "next";
 import React from "react";
 import styled from "styled-components";
 import { FaGhost } from "react-icons/fa";
-import Button from "../components/Button";
 
-const Blog: NextPage = () => {
+const Page404: NextPage = () => {
   return (
     <Container>
       <FaGhost size={150} color={"#fff"} />
@@ -29,4 +28,4 @@ const Info = styled.h1`
   font-weight: bold;
   text-align: center;
 `;
-export default Blog;
+export default Page404;
