@@ -50,7 +50,7 @@ const Home: NextPage = () => {
           people.
         </About>
         <Button
-          link="/blog"
+          link="/posts"
           color="#32978e"
           textColor={"#32978E"}
           outline
