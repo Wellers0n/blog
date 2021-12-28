@@ -1,16 +1,9 @@
-import React, { ComponentElement } from "react";
+import React from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { darcula } from "react-syntax-highlighter/dist/cjs/styles/prism";
 
-interface Props {
-  node: any;
-  inline: any;
-  className: string;
-  children: ComponentElement<any, any>;
-}
-
 const CodeBlock = {
-  code({ node, inline, className, children, ...props }: Props) {
+  code({ node, inline, className, children, ...props }: any) {
     const match = /language-(\w+)/.exec(className || "");
     return !inline && match ? (
       <SyntaxHighlighter

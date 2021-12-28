@@ -44,7 +44,7 @@ export async function getStaticPaths() {
   };
 }
 
-export default function Post({ post, morePosts, preview }) {
+export default function Post({ post, morePosts, preview }: any) {
   const router = useRouter();
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />;
