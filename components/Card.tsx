@@ -34,7 +34,14 @@ export default function MoreStories({ posts }: Props) {
 const Container = styled.section`
   padding: 20px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+
+  @media (max-width: 2600px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  @media (max-width: 1600px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 
   @media (max-width: 1100px) {
     grid-template-columns: 1fr 1fr;
@@ -43,8 +50,4 @@ const Container = styled.section`
   @media (max-width: 700px) {
     grid-template-columns: 1fr;
   }
-
-  /* @media (max-width: 500px) {
-    grid-template-columns: 1fr;
-  } */
 `;
