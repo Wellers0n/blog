@@ -17,19 +17,26 @@ export default function PostHeader({ title, coverImage, date, author }: Props) {
   return (
     <>
       <PostTitle>{title}</PostTitle>
-      <div className="hidden md:block md:mb-12">
+      <ContainerAvatar>
         <Avatar name={author.name} picture={author.picture} />
-      </div>
-      <div className="mb-8 md:mb-16 sm:mx-0">
-        <CoverImage title={title} src={coverImage} height={620} width={1240} />
-      </div>
-      <div className="max-w-2xl mx-auto">
-        <div className="mb-6 text-lg">
-          <DateFormatter dateString={date} />
-        </div>
-      </div>
+      </ContainerAvatar>
+      <CoverImage title={title} src={coverImage} height={620} width={1240} />
+      <ContainerDate>
+        <DateFormatter dateString={date} />
+      </ContainerDate>
     </>
   );
 }
 
-const PostTitle = styled.h1``;
+const PostTitle = styled.h1`
+  font-size: 3rem;
+  font-weight: bold;
+`;
+
+const ContainerDate = styled.div`
+  margin-top: 30px;
+`;
+
+const ContainerAvatar = styled.div`
+  margin: 50px 0;
+`;
