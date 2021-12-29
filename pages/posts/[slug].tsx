@@ -54,7 +54,7 @@ export default function Post({ post, morePosts, preview }: any) {
   return (
     <Container>
       {router.isFallback ? (
-        <PostTitle>Loading…</PostTitle>
+        <div>Loading…</div>
       ) : (
         <>
           <Header>
@@ -125,8 +125,6 @@ const Article = styled.article`
   }
 `;
 
-const PostTitle = styled.div``;
-
 const Header = styled.div`
   display: flex;
   position: relative;
@@ -136,12 +134,6 @@ const Header = styled.div`
   width: 100%;
   height: 120px;
   background: #32978e;
-`;
-
-const Title = styled.h1`
-  text-align: center;
-  color: #fff;
-  font-weight: bold;
 `;
 
 const BackButton = styled.div`
