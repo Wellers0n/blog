@@ -5,7 +5,7 @@ import styled from "styled-components";
 interface Props {
   title: string;
   src: string;
-  slug: string;
+  slug?: string;
   height: number;
   width: number;
 }

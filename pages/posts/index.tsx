@@ -1,8 +1,8 @@
 import { NextPage } from "next";
 import React from "react";
 import styled from "styled-components";
-import Card from "../components/Card";
-import { getAllPosts } from "../lib/api";
+import Card from "../../components/Card";
+import { getAllPosts } from "../../lib/api";
 import Head from "next/head";
 import { FaArrowCircleLeft } from "react-icons/fa";
 import Link from "next/link";
