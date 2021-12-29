@@ -7,6 +7,8 @@ import { getPostBySlug, getAllPosts } from "../../lib/api";
 // Components
 import PostHeader from "../../components/PostHeader";
 import PostBody from "../../components/PostBody";
+import Link from "next/link";
+import { FaArrowCircleLeft } from "react-icons/fa";
 
 export async function getStaticProps({ params }: any) {
   const post = getPostBySlug(params.slug, [
@@ -55,10 +57,18 @@ export default function Post({ post, morePosts, preview }: any) {
         <PostTitle>Loading…</PostTitle>
       ) : (
         <>
-          <article>
+          <Header>
+            <BackButton>
+              <Link as={"/posts"} href="/posts" passHref>
+                <FaArrowCircleLeft color="#fff" size={35} />
+              </Link>
+            </BackButton>
+          </Header>
+          <Article>
             <Head>
               <title>{post.title}</title>
             </Head>
+
             <PostHeader
               title={post.title}
               coverImage={post.coverImage}
@@ -66,7 +76,7 @@ export default function Post({ post, morePosts, preview }: any) {
               author={post.author}
             />
             <PostBody content={post.content} />
-          </article>
+          </Article>
         </>
       )}
     </Container>
@@ -74,6 +84,11 @@ export default function Post({ post, morePosts, preview }: any) {
 }
 
 const Container = styled.div`
+  width: 100%;
+  height: auto;
+`;
+
+const Article = styled.article`
   margin: auto;
   padding: 20px 500px;
 
@@ -111,3 +126,27 @@ const Container = styled.div`
 `;
 
 const PostTitle = styled.div``;
+
+const Header = styled.div`
+  display: flex;
+  position: relative;
+
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 120px;
+  background: #32978e;
+`;
+
+const Title = styled.h1`
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+`;
+
+const BackButton = styled.div`
+  position: absolute;
+  left: 0;
+  margin-left: 40px;
+  cursor: pointer;
+`;
