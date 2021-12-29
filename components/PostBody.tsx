@@ -15,6 +15,7 @@ export default function PostBody({ content }: Props) {
 }
 
 const Container = styled.div`
+font-size: 1.15rem;
   @media (min-width: 1200px) {
     padding: 20px 200px;
   }
