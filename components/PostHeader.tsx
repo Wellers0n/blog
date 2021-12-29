@@ -36,8 +36,8 @@ const PostTitle = styled.h1`
 const ContainerDate = styled.div`
   margin-top: 30px;
 
-  @media (min-width: 1400px) {
-    padding-left: 150px;
+  @media (min-width: 1200px) {
+    padding-left: 200px;
   }
 `;
 
