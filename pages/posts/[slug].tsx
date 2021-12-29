@@ -78,25 +78,25 @@ const Container = styled.div`
   padding: 20px 500px;
 
   @media (max-width: 2000px) {
-    padding: 20px 350px;
-  }
-
-  @media (max-width: 1700px) {
     padding: 20px 250px;
   }
 
-  @media (max-width: 1400px) {
+  @media (max-width: 1700px) {
     padding: 20px 200px;
+  }
+
+  @media (max-width: 1400px) {
+    padding: 20px 100px;
   }
 
   @media (max-width: 1200px) {
     margin: auto;
-    padding: 20px 150px;
+    padding: 20px 50px;
   }
 
   @media (max-width: 800px) {
     margin: none;
-    padding: 20px 100px;
+    padding: 20px 50px;
   }
 
   @media (max-width: 540px) {

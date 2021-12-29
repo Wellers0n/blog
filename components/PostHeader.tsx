@@ -35,6 +35,10 @@ const PostTitle = styled.h1`
 
 const ContainerDate = styled.div`
   margin-top: 30px;
+
+  @media (min-width: 1400px) {
+    padding-left: 150px;
+  }
 `;
 
 const ContainerAvatar = styled.div`
