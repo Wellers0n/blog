@@ -78,7 +78,10 @@ export default function Post({ post, morePosts, preview }: any) {
             <meta property="og:type" content="article" />
             <meta data-rh="true" name="referrer" content="unsafe-url" />
             <meta property="article:published_time" content={post.date} />
-            <meta property="og:image" content={post.coverImage} />
+            <meta
+              property="og:image"
+              content={`https://wellerson.dev${post.coverImage}`}
+            />
             <meta property="og:site_name" content={"wellerson.dev"} />
             <meta property="og:title" content={post.title} />
             <meta property="og:description" content={post.excerpt} />
@@ -87,8 +90,14 @@ export default function Post({ post, morePosts, preview }: any) {
             <meta name="twitter:card" content="summary_large_image" />
             <meta name="twitter:title" content={post.title} />
             <meta name="twitter:description" content={post.excerpt} />
-            <meta name="twitter:image" content={post.coverImage} />
-            <meta name="twitter:image:src" content={post.coverImage} />
+            <meta
+              name="twitter:image"
+              content={`https://wellerson.dev${post.coverImage}`}
+            />
+            <meta
+              name="twitter:image:src"
+              content={`https://wellerson.dev${post.coverImage}`}
+            />
             <meta name="twitter:creator" content={"@wellers0n"} />
           </Head>
           <Header>
