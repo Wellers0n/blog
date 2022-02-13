@@ -15,7 +15,7 @@ export async function getStaticProps({ params }: any) {
     "title",
     "date",
     "slug",
-    'excerpt',
+    "excerpt",
     "author",
     "content",
     "ogImage",
@@ -52,7 +52,7 @@ export default function Post({ post, morePosts, preview }: any) {
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />;
   }
-  console.log(post)
+  console.log(post);
   return (
     <Container>
       {router.isFallback ? (
@@ -60,14 +60,24 @@ export default function Post({ post, morePosts, preview }: any) {
       ) : (
         <>
           <Head>
-            <meta name="twitter:card" content={post.coverImage} />
-            <meta name="twitter:site" content="@Wellers0n" />
-            <meta name="twitter:title" content={post.title} />
+            {/* Twitter */}
+            <meta name="twitter:card" content={post.excerpt} key="twcard" />
             <meta
-              name="twitter:description"
-              content={post.excerpt}
+              name="twitter:creator"
+              content={'@wellers0n'}
+              key="twhandle"
             />
-            <meta name="twitter:image" content={post.author.picture} />
+
+            {/* Open Graph */}
+            {/* <meta property="og:url" content={currentURL} key="ogurl" /> */}
+            <meta property="og:image" content={post.coverImage} key="ogimage" />
+            <meta property="og:site_name" content={'wellerson.dev'} key="ogsitename" />
+            <meta property="og:title" content={post.title} key="ogtitle" />
+            <meta
+              property="og:description"
+              content={post.excerpt}
+              key="ogdesc"
+            />
           </Head>
           <Header>
             <BackButton>
