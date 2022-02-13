@@ -60,15 +60,13 @@ export default function Post({ post, morePosts, preview }: any) {
       ) : (
         <>
           <Head>
-            {/* Twitter */}
-            <meta name="twitter:card" content="summary_large_image" />
-            <meta name="twitter:title" content={post.title} />
-            <meta name="twitter:description" content={post.excerpt} />
-            <meta name="twitter:image:src" content={post.coverImage} />
-            <meta name="twitter:creator" content={"@wellers0n"} />
-            <meta name="twitter:site" content="@wellers0n" />
-
             {/* Open Graph */}
+            <meta data-rh="true" charSet="utf-8" />
+            <meta
+              data-rh="true"
+              name="viewport"
+              content="width=device-width,minimum-scale=1,initial-scale=1,maximum-scale=1"
+            />
             <meta
               property="og:url"
               content={`https://wellerson.dev${router.asPath}`}
@@ -79,6 +77,13 @@ export default function Post({ post, morePosts, preview }: any) {
             <meta property="og:site_name" content={"wellerson.dev"} />
             <meta property="og:title" content={post.title} key="ogtitle" />
             <meta property="og:description" content={post.excerpt} />
+
+            {/* Twitter */}
+            <meta name="twitter:card" content="summary_large_image" />
+            <meta name="twitter:title" content={post.title} />
+            <meta name="twitter:description" content={post.excerpt} />
+            <meta name="twitter:image:src" content={post.coverImage} />
+            <meta name="twitter:creator" content={"@wellers0n"} />
           </Head>
           <Header>
             <BackButton>
