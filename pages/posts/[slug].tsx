@@ -52,7 +52,7 @@ export default function Post({ post, morePosts, preview }: any) {
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />;
   }
-  console.log(router);
+
   return (
     <Container>
       {router.isFallback ? (
@@ -74,7 +74,7 @@ export default function Post({ post, morePosts, preview }: any) {
               content={`https://wellerson.dev${router.asPath}`}
               key="ogurl"
             />
-            <meta property="og:image" content={post.ogImage} key="ogimage" />
+            <meta property="og:image" content={post.ogImage.url} key="ogimage" />
             <meta
               property="og:site_name"
               content={"wellerson.dev"}
