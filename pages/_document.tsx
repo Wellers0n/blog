@@ -9,9 +9,10 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
+          <meta charSet="utf-8" />
           <meta
             name="viewport"
-            content="initial-scale=1.0, width=device-width"
+            content="width=device-width,minimum-scale=1,initial-scale=1,maximum-scale=1"
           />
           <link rel="shortcut icon" href="/avatar.jpg" />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
