@@ -61,9 +61,8 @@ export default function Post({ post, morePosts, preview }: any) {
         <>
           <Head>
             {/* Open Graph */}
-            <meta data-rh="true" charSet="utf-8" />
+            <meta charSet="utf-8" />
             <meta
-              data-rh="true"
               name="viewport"
               content="width=device-width,minimum-scale=1,initial-scale=1,maximum-scale=1"
             />
@@ -72,16 +71,22 @@ export default function Post({ post, morePosts, preview }: any) {
               content={`https://wellerson.dev${router.asPath}`}
             />
             <meta name="author" content="Wellerson" />
+            <meta
+              name="robots"
+              content="index,follow,max-image-preview:large"
+            />
             <meta property="og:type" content="article" />
+            <meta property="article:published_time" content={post.date} />
             <meta property="og:image" content={post.coverImage} />
             <meta property="og:site_name" content={"wellerson.dev"} />
-            <meta property="og:title" content={post.title}  />
+            <meta property="og:title" content={post.title} />
             <meta property="og:description" content={post.excerpt} />
 
             {/* Twitter */}
             <meta name="twitter:card" content="summary_large_image" />
             <meta name="twitter:title" content={post.title} />
             <meta name="twitter:description" content={post.excerpt} />
+            <meta name="twitter:image" content={post.coverImage} />
             <meta name="twitter:image:src" content={post.coverImage} />
             <meta name="twitter:creator" content={"@wellers0n"} />
           </Head>
