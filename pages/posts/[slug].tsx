@@ -51,12 +51,23 @@ export default function Post({ post, morePosts, preview }: any) {
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />;
   }
+  console.log(post)
   return (
     <Container>
       {router.isFallback ? (
         <div>Loading…</div>
       ) : (
         <>
+          <Head>
+            <meta name="twitter:card" content={post.coverImage} />
+            <meta name="twitter:site" content="@Wellers0n" />
+            <meta name="twitter:title" content={post.title} />
+            <meta
+              name="twitter:description"
+              content="DESCRIPTION_FOR_YOUR_PAGE"
+            />
+            <meta name="twitter:image" content={post.author.picture} />
+          </Head>
           <Header>
             <BackButton>
               <Link as={"/posts"} href="/posts" passHref>
