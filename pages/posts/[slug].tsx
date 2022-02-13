@@ -61,13 +61,16 @@ export default function Post({ post, morePosts, preview }: any) {
         <>
           <Head>
             {/* Twitter */}
-            <meta name="twitter:card" content="summary" key="twcard" />
+            <meta
+              name="twitter:card"
+              content="summary || summary_large_image || player || app"
+              key="twcard"
+            />
             <meta
               name="twitter:creator"
               content={"@wellers0n"}
               key="twhandle"
             />
-            <meta name="twitter:image" content={post.coverImage} />
 
             {/* Open Graph */}
             <meta
