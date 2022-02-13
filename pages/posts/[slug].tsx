@@ -64,32 +64,20 @@ export default function Post({ post, morePosts, preview }: any) {
             <meta
               name="twitter:card"
               content="summary || summary_large_image || player || app"
-              key="twcard"
             />
-            <meta
-              name="twitter:creator"
-              content={"@wellers0n"}
-              key="twhandle"
-            />
+            <meta name="twitter:creator" content={"@wellers0n"} />
+            <meta name="twitter:site" content="@wellers0n" />
+            <meta name="twitter:image" content={post.coverImage} />
 
             {/* Open Graph */}
             <meta
               property="og:url"
               content={`https://wellerson.dev${router.asPath}`}
-              key="ogurl"
             />
-            <meta property="og:image" content={post.coverImage} key="ogimage" />
-            <meta
-              property="og:site_name"
-              content={"wellerson.dev"}
-              key="ogsitename"
-            />
-            <meta property="og:title" content={post.title} key="ogtitle" />
-            <meta
-              property="og:description"
-              content={post.excerpt}
-              key="ogdesc"
-            />
+            <meta property="og:image" content={post.coverImage} />
+            <meta property="og:site_name" content={"wellerson.dev"} />
+            <meta property="og:title" content={post.title} />
+            <meta property="og:description" content={post.excerpt} />
           </Head>
           <Header>
             <BackButton>
