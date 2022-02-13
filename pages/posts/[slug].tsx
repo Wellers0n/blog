@@ -67,6 +67,7 @@ export default function Post({ post, morePosts, preview }: any) {
               content={"@wellers0n"}
               key="twhandle"
             />
+            <meta name="twitter:image" content={post.coverImage} />
 
             {/* Open Graph */}
             <meta
@@ -74,7 +75,7 @@ export default function Post({ post, morePosts, preview }: any) {
               content={`https://wellerson.dev${router.asPath}`}
               key="ogurl"
             />
-            <meta property="og:image" content={post.ogImage.url} key="ogimage" />
+            <meta property="og:image" content={post.coverImage} key="ogimage" />
             <meta
               property="og:site_name"
               content={"wellerson.dev"}
