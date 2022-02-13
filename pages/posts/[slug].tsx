@@ -64,7 +64,6 @@ export default function Post({ post, morePosts, preview }: any) {
             <meta name="twitter:card" content="summary_large_image" />
             <meta name="twitter:title" content={post.title} />
             <meta name="twitter:description" content={post.excerpt} />
-            <meta name="twitter:image" content={post.coverImage} />
             <meta name="twitter:creator" content={"@wellers0n"} />
             <meta name="twitter:site" content="@wellers0n" />
 
