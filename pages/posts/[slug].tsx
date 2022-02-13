@@ -86,6 +86,7 @@ export default function Post({ post, morePosts, preview }: any) {
 
             {/* Open Graph */}
             <meta
+              data-rh="true"
               property="og:url"
               content={`https://wellerson.dev${router.asPath}`}
             />
