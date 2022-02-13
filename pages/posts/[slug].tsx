@@ -76,6 +76,7 @@ export default function Post({ post, morePosts, preview }: any) {
               content="index,follow,max-image-preview:large"
             />
             <meta property="og:type" content="article" />
+            <meta data-rh="true" name="referrer" content="unsafe-url" />
             <meta property="article:published_time" content={post.date} />
             <meta property="og:image" content={post.coverImage} />
             <meta property="og:site_name" content={"wellerson.dev"} />
