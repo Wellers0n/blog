@@ -11,7 +11,7 @@ ogImage:
 ---
 
 ## TL;DR
-In this article we gonna learn how to create a simple clock alarm to wake us up at 7am using ***nodejs***. A cron job let you define a pattern of recurrence to perform a given task.
+In this article we're gonna learn how to create a simple clock alarm to wake us up at 7am using ***nodejs***. A cron job let you define a pattern of recurrence to perform a given task.
 we are going to use the package cron to make the cron job handling easier, a cron uses a specific syntax to create a recurrence pattern,
 ***[crontab.guru](https://crontab.guru)*** is a great place to learn more about the syntax and find what patterns do you need for your application
 
