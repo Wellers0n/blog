@@ -61,7 +61,7 @@ export default function Post({ post, morePosts, preview }: any) {
         <>
           <Head>
             {/* Twitter */}
-            <meta name="twitter:card" content={post.excerpt} key="twcard" />
+            <meta name="twitter:card" content="summary" key="twcard" />
             <meta
               name="twitter:creator"
               content={"@wellers0n"}
