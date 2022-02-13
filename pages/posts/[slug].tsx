@@ -15,6 +15,7 @@ export async function getStaticProps({ params }: any) {
     "title",
     "date",
     "slug",
+    'excerpt',
     "author",
     "content",
     "ogImage",
@@ -64,7 +65,7 @@ export default function Post({ post, morePosts, preview }: any) {
             <meta name="twitter:title" content={post.title} />
             <meta
               name="twitter:description"
-              content="DESCRIPTION_FOR_YOUR_PAGE"
+              content={post.excerpt}
             />
             <meta name="twitter:image" content={post.author.picture} />
           </Head>

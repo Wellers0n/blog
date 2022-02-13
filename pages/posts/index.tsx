@@ -36,7 +36,7 @@ interface Props {
 }
 
 const Blog: NextPage<Props> = ({ allPosts }) => {
-  console.log(allPosts);
+  
   return (
     <Container>
       <Head>
