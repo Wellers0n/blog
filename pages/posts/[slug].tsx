@@ -87,6 +87,7 @@ export default function Post({ post, morePosts, preview }: any) {
             {/*<!-- Twitter Meta Tags -->*/}
             <meta name="twitter:title" content={post.title} />
             <meta name="twitter:description" content={post.excerpt} />
+            <meta name="twitter:creator" content="@wellers0n_" />
             <meta
               name="twitter:image"
               content={`https://wellerson.dev${post.coverImage}`}
