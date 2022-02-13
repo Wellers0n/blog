@@ -7,7 +7,7 @@ author:
   name: Wellerson
   picture: '/assets/blog/authors/wellerson.jpg'
 ogImage:
-  url: '/assets/blog/hello-world/cover.jpg'
+  url: '/assets/blog/cron-jobs/cron-jobs.jpeg'
 ---
 
 ## TL;DR
@@ -17,19 +17,21 @@ we are going to use the package cron to make the cron job handling easier, a c
 
 > You need to be aware of the basics about ***nodejs*** and ***express***, we build a server with these technologies.
 
+## Installing Dependencies
+
+ > yarn add express
+
+ > yarn add cron
+
 ## Introduction
 
-Our cron jobs stayed in the backend, therefore we need to up a server in Nodejs, I’m using express but we can use koaJS too, to make it easier I created a repository on my [github](https://github.com/wellers0n/blog).  In app.js we will have a server importing a job service.
+Our cron jobs stayed in the backend, therefore we need to up a server in Nodejs, I’m using express but we can use koaJS too, to make it easier I created a repository on my [github](https://github.com/Wellers0n/cron-job).  In app.js we will have a server importing a job service.
+
+Let's understand how a job works, we will import it into ***app.js***
 
 ```js
 
-import jobs from './app/jobs'
-
-```
-
-Let's understand how a job works, we will import it into ***index.js***
-
-```js
+// app.js
 
 import 'dotenv/config'
 import './app/models'
@@ -183,3 +185,7 @@ console.log(`${loggerPrefix} started at: ${appStartedAt}`)
 ```
 
 Now we have a cron job working, thanks for reading this article! If you have any questions, DM me on twitter.
+
+## Conclusion
+
+We see how easy it is to use a cron-jobs in nodejs using express server, now we can schedule a time to perform some function, thanks for reading
