@@ -60,24 +60,38 @@ export default function Post({ post, morePosts, preview }: any) {
       ) : (
         <>
           <Head>
-            {/* Open Graph */}
+            <title>{post.title}</title>
+            <meta name="description" content={post.excerpt} />
 
+            {/*<!-- Google / Search Engine Tags -->*/}
+            <meta itemProp="name" content={post.title} />
+            <meta itemProp="description" content={post.excerpt} />
+            <meta
+              itemProp="image"
+              content={`https://wellerson.dev${post.coverImage}`}
+            />
+
+            {/*<!-- Facebook Meta Tags -->*/}
             <meta property="og:title" content={post.title} />
             <meta property="og:description" content={post.excerpt} />
-
-            <meta property="og:type" content="article" />
-            <meta
-              property="og:url"
-              content={`https://wellerson.dev${router.asPath}`}
-            />
             <meta
               property="og:image"
               content={`https://wellerson.dev${post.coverImage}`}
             />
-            <meta name="theme-color" content="#000000" />
+            <meta
+              property="og:url"
+              content={`https://wellerson.dev${router.asPath}`}
+            />
+            <meta property="og:type" content="website" />
 
-            {/*  Include this to make the og:image larger  */}
-            <meta name="twitter:card" content="summary_large_image"></meta>
+            {/*<!-- Twitter Meta Tags -->*/}
+            <meta name="twitter:title" content={post.title} />
+            <meta name="twitter:description" content={post.excerpt} />
+            <meta
+              name="twitter:image"
+              content={`https://wellerson.dev${post.coverImage}`}
+            />
+            <meta name="twitter:card" content="summary_large_image" />
           </Head>
           <Header>
             <BackButton>
