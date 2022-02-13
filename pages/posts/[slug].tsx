@@ -73,9 +73,9 @@ export default function Post({ post, morePosts, preview }: any) {
             />
             <meta name="author" content="Wellerson" />
             <meta property="og:type" content="article" />
-            <meta property="og:image" content={post.coverImage} key="ogimage" />
+            <meta property="og:image" content={post.coverImage} />
             <meta property="og:site_name" content={"wellerson.dev"} />
-            <meta property="og:title" content={post.title} key="ogtitle" />
+            <meta property="og:title" content={post.title}  />
             <meta property="og:description" content={post.excerpt} />
 
             {/* Twitter */}
