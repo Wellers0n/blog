@@ -61,23 +61,59 @@ export default function Post({ post, morePosts, preview }: any) {
         <>
           <Head>
             {/* Twitter */}
-            <meta name="twitter:card" content="summary_large_image" />
-            <meta name="twitter:title" content={post.title} />
-            <meta name="twitter:description" content={post.excerpt} />
-            <meta name="twitter:image" content={post.coverImage} />
-            <meta name="twitter:creator" content={"@wellers0n"} />
-            <meta name="twitter:site" content="@wellers0n" />
+            <meta
+              data-rh="true"
+              name="twitter:card"
+              content="summary_large_image"
+            />
+            <meta data-rh="true" name="twitter:title" content={post.title} />
+            <meta
+              data-rh="true"
+              name="twitter:description"
+              content={post.excerpt}
+            />
+            <meta
+              data-rh="true"
+              name="twitter:image:src"
+              content={post.coverImage}
+            />
+            <meta
+              data-rh="true"
+              name="twitter:creator"
+              content={"@wellers0n"}
+            />
+            <meta data-rh="true" name="twitter:site" content="@wellers0n" />
 
             {/* Open Graph */}
             <meta
+              data-rh="true"
               property="og:url"
               content={`https://wellerson.dev${router.asPath}`}
             />
-            <meta property="og:type" content="article" />
-            <meta property="og:image" content={post.coverImage} key="ogimage" />
-            <meta property="og:site_name" content={"wellerson.dev"} />
-            <meta property="og:title" content={post.title} key="ogtitle" />
-            <meta property="og:description" content={post.excerpt} />
+            <meta data-rh="true" name="author" content="Wellerson" />
+            <meta data-rh="true" property="og:type" content="article" />
+            <meta
+              data-rh="true"
+              property="og:image"
+              content={post.coverImage}
+              key="ogimage"
+            />
+            <meta
+              data-rh="true"
+              property="og:site_name"
+              content={"wellerson.dev"}
+            />
+            <meta
+              data-rh="true"
+              property="og:title"
+              content={post.title}
+              key="ogtitle"
+            />
+            <meta
+              data-rh="true"
+              property="og:description"
+              content={post.excerpt}
+            />
           </Head>
           <Header>
             <BackButton>
