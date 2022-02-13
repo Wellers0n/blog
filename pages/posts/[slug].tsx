@@ -61,40 +61,23 @@ export default function Post({ post, morePosts, preview }: any) {
         <>
           <Head>
             {/* Open Graph */}
-            <meta charSet="utf-8" />
-            <meta
-              name="viewport"
-              content="width=device-width,minimum-scale=1,initial-scale=1,maximum-scale=1"
-            />
+
+            <meta property="og:title" content={post.title} />
+            <meta property="og:description" content={post.excerpt} />
+
+            <meta property="og:type" content="article" />
             <meta
               property="og:url"
               content={`https://wellerson.dev${router.asPath}`}
             />
-            <meta name="author" content="Wellerson" />
-            <meta
-              name="robots"
-              content="index,follow,max-image-preview:large"
-            />
-            <meta property="og:type" content="article" />
-            <meta data-rh="true" name="referrer" content="unsafe-url" />
-            <meta property="article:published_time" content={post.date} />
             <meta
               property="og:image"
               content={`https://wellerson.dev${post.coverImage}`}
             />
-            <meta property="og:site_name" content={"wellerson.dev"} />
-            <meta property="og:title" content={post.title} />
-            <meta property="og:description" content={post.excerpt} />
+            <meta name="theme-color" content="#000000" />
 
-            {/* Twitter */}
-            <meta name="twitter:card" content="summary_large_image" />
-            <meta name="twitter:title" content={post.title} />
-            <meta name="twitter:description" content={post.excerpt} />
-            <meta
-              name="twitter:image"
-              content={`https://wellerson.dev${post.coverImage}`}
-            />
-            <meta name="twitter:creator" content={"@wellers0n"} />
+            {/*  Include this to make the og:image larger  */}
+            <meta name="twitter:card" content="summary_large_image"></meta>
           </Head>
           <Header>
             <BackButton>
