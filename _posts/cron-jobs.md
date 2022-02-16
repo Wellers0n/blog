@@ -19,9 +19,13 @@ we are going to use the package cron to make the cron job handling easier, a c
 
 ## Installing Dependencies
 
- > yarn add express
+```sh
 
- > yarn add cron
+ yarn add express
+
+ yarn add cron
+ 
+```
 
 ## Introduction
 
